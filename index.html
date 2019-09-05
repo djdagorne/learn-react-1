@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>React Hello World</title>
+  <title>Sally Student Resume</title>
+  <link href="index.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <div id="application-root"></div>
@@ -15,25 +16,70 @@
     </script>
     <script type="text/babel">
 
-        function App(props) {
-            console.log(props)
-            return (
-                {props.children}
-            );
-        }
-
-        // Nested elements inside the App
-        ReactDOM.render(
-            <App>
+    function App(props) {
+        console.log(props)
+        return (
+            <div>
                 <header>
-                    <h1>
-                        Sally Student
-                    </h1>
-                </header>
-            </App>,
-            document.querySelector('#application-root')
+		            {props.children}
+	            </header>
+	        <main>
+                <h3>
+                <address>
+                    <div>123-123-1234</div>
+                    <div>23 Fake Street</div>
+                    <div>Faketown, A1A 1A1</div>
+                    <a href="mailto:dj.dagorne@gmail.com?subject=Link%20Here,%20Link%20There">sallystudent@gmail.com</a>
+                </address>
+		        </h3>
+                <div className="DisplayPic">
+                    <img src="https://ia.media-imdb.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_UX214_CR0,0,214,317_AL_.jpg" alt="Picture of young hardworking Fightpit Wrangler"/>
+                </div>
+                <section  className="skills-for-bills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Using Public Transit</li>
+                    <li>jQuery</li>
+                </ul>
+                </section>
+                <section>
+                    <h2> Work Experience</h2>
+                        <h3>Merchandiser, Customer Service Representative</h3>
+                            <h4>Shoppers Drugmart, January 2020 - July 2020</h4>
+                                <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+                        <h3>Bearsquid Wrangler, Custodian</h3>
+                            <h4>New New Jersey Fightpits, 1st Time Schism - Smarch 2522</h4>
+                                <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+                </section>
+                <section>
+                    <h2>Education</h2>
+                        <h4>School of Hard Knocks, Bachelor in Shoe Lace Tying, 2016-2020</h4>
+                            <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                </section>
+            </main>
+            <footer>
+                <h2>Contact Infomation</h2>
+                <p>Contact me at <a href="mailto:sallystudent@gmail.com?subject=Link%20Here,%20Link%20There">sallystudent@gmail.com</a> or at 123-123-1234</p>
+            </footer>
+      </div>
         );
+    }
 
+    // Nested elements inside the App
+    ReactDOM.render(
+    <App className='my-class'>
+        <h1>Sally Student!</h1>
+    </App>,
+    document.querySelector('#application-root')
+    );
     </script>
 </body>
 </html>
